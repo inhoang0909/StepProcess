@@ -1,0 +1,17 @@
+{
+  "welcome": "欢迎来到我的应用",
+  "change_language": "切换语言",
+  "form": {
+    "date": "日期",
+    "shift": "班次",
+    "selectShift": "选择班次",
+    "shiftMorning": "早班",
+    "shiftAfternoon": "中班",
+    "shiftNight": "晚班",
+    "workerName": "员工姓名",
+    "workerPlaceholder": "输入员工姓名",
+    "timeIn": "进场时间",
+    "timeOut": "离场时间",
+    "dumpMatTemp": "投料温度"
+  }
+}

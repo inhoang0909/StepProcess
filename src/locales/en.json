@@ -1,0 +1,18 @@
+{
+  "welcome": "Welcome to my app",
+  "change_language": "Change language",
+  "form": {
+    "date": "Date",
+    "shift": "Shift",
+    "selectShift": "Select a shift",
+    "shiftMorning": "Morning",
+    "shiftAfternoon": "Afternoon",
+    "shiftNight": "Night",
+    "workerName": "Worker Name",
+    "workerPlaceholder": "Enter worker name",
+    "timeIn": "Time In",
+    "timeOut": "Time Out",
+    "dumpMatTemp": "Dumping Material Temperature"
+  }
+}
+

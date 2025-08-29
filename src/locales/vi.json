@@ -1,0 +1,17 @@
+{
+  "welcome": "Chào mừng đến với ứng dụng của tôi",
+  "change_language": "Đổi ngôn ngữ",
+  "form": {
+    "date": "Ngày",
+    "shift": "Ca làm",
+    "selectShift": "Chọn ca làm",
+    "shiftMorning": "Ca sáng",
+    "shiftAfternoon": "Ca chiều",
+    "shiftNight": "Ca đêm",
+    "workerName": "Tên nhân viên",
+    "workerPlaceholder": "Nhập tên nhân viên",
+    "timeIn": "Giờ vào",
+    "timeOut": "Giờ ra",
+    "dumpMatTemp": "Nhiệt độ nguyên liệu"
+  }
+}
