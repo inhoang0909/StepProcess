@@ -38,9 +38,7 @@ export default function App() {
     <ConfigProvider locale={getAntdLocale()}>
       <Layout>
         <Navbar  mode={window.innerWidth < 1024 ? "inline" : "horizontal"} />
-        <Content style={{
-          padding: window.innerWidth < 1024 ? "12px" : "20px",
-        
+        <Content style={{        
         }}>
           <Routes>
             <Route path="/" element={<ScanPage />} />

@@ -29,7 +29,6 @@ export default function Step3({ data, updateData }) {
       }}
       onValuesChange={handleValueChange}
     >
-      {/* Worker Name - full width */}
       <Form.Item
         label={t("label.workerName")}
         name="workerData"
@@ -39,7 +38,6 @@ export default function Step3({ data, updateData }) {
         <Login />
       </Form.Item>
 
-      {/* tempRoll + releaseTime trên 1 hàng */}
       <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
         <Form.Item
           label={t("label.tempRoll")}
@@ -59,6 +57,7 @@ export default function Step3({ data, updateData }) {
             style={{ width: "100%" }}
             min={0}
             placeholder={t("label.inputTempRoll")}
+            inputMode="numeric"
           />
         </Form.Item>
 
@@ -68,11 +67,10 @@ export default function Step3({ data, updateData }) {
           style={{ flex: 1, fontWeight: "bold", minWidth: 140 }}
           rules={[{ required: true, message: t("label.inputEndTime") }]}
         >
-          <TimePicker style={{ width: "100%" }} format="HH:mm" />
+          <TimePicker style={{ width: "100%" }} format="HH:mm" inputReadOnly/>
         </Form.Item>
       </div>
 
-      {/* tempMaterial + glueWeight trên 1 hàng */}
       <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
         <Form.Item
           label={t("label.temperature")}
@@ -92,6 +90,7 @@ export default function Step3({ data, updateData }) {
             style={{ width: "100%" }}
             min={0}
             placeholder={t("label.inputTemp")}
+            inputMode="numeric"
           />
         </Form.Item>
 
@@ -113,6 +112,7 @@ export default function Step3({ data, updateData }) {
             style={{ width: "100%" }}
             min={0}
             placeholder={t("label.inputGlueWeight")}
+            inputMode="numeric"
           />
         </Form.Item>
       </div>

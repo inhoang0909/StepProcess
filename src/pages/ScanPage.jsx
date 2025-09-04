@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { ensureForm } from "../utils/helper";
 
 const { Title } = Typography;
-const TARGET_QR = ["25080319-W-RB001G000-34", "25080319-W-RB002G000-99"];
+const TARGET_QR = ["123", "456", "789"];
 
 export default function ScanPage() {
   const navigate = useNavigate();

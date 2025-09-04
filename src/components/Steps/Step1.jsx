@@ -35,7 +35,7 @@ export default function Step1({ data, updateData }) {
           rules={[{ required: true, message: t("label.inputDate") }]}
           noStyle
         >
-          <DatePicker style={{ width: "100%" }} />
+          <DatePicker style={{ width: "100%" }} inputReadOnly/>
         </Form.Item>
       ),
     },
@@ -97,7 +97,7 @@ export default function Step1({ data, updateData }) {
           style={{ flex: 1, fontWeight: "bold" }}
           rules={[{ required: true, message: t("label.inputWorkerDate") }]}
         >
-          <DatePicker style={{ width: "200px" }} />
+          <DatePicker style={{ width: "200px" }} inputReadOnly/>
         </Form.Item>
 
         <Form.Item

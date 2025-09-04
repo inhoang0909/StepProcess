@@ -13,6 +13,7 @@ export default function Login({ value, onChange }) {
   const [cameraOpen, setCameraOpen] = useState(false);
   const [workerInfo, setWorkerInfo] = useState(null);
   const [showConfirm, setShowConfirm] = useState(false);
+  const [maxAttemptReached, setMaxAttemptReached] = useState(false);
 
   useEffect(() => {
     setCameraOpen(true);
@@ -25,6 +26,7 @@ export default function Login({ value, onChange }) {
 
   const handleMaxAttempts = () => {
     setCameraOpen(false);
+    setMaxAttemptReached(true);
   };
 
   const handleConfirm = (data) => {
@@ -36,14 +38,16 @@ export default function Login({ value, onChange }) {
   return (
     <div style={{ maxWidth: 480, margin: "0 auto", padding: 24 }}>
       <Space direction="vertical" size={20} style={{ width: "100%", alignItems: "center" }}>
-        <Button
-          icon={<CameraFilled />}
-          onClick={() => setCameraOpen(true)}
-          type="default"
-          style={{ fontSize: "18px", padding: "12px 32px", width: 220 }}
-        >
-          {t("takePhoto") || "Open Camera"}
-        </Button>
+        {!maxAttemptReached && (
+          <Button
+            icon={<CameraFilled />}
+            onClick={() => setCameraOpen(true)}
+            type="default"
+            style={{ fontSize: "18px", padding: "12px 32px", width: 220 }}
+          >
+            {t("takePhoto") || "Open Camera"}
+          </Button>
+        )}
 
         <CameraModal
           open={cameraOpen}
@@ -54,7 +58,7 @@ export default function Login({ value, onChange }) {
           t={t}
         />
 
-        {!value && !cameraOpen && !showConfirm && (
+        {maxAttemptReached && !value && !showConfirm && (
           <ManualInputForm t={t} onConfirm={handleConfirm} />
         )}
 

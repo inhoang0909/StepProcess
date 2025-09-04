@@ -44,7 +44,7 @@ export default function Step2({ data, updateData }) {
           style={{ flex: 1, fontWeight: "bold", minWidth: 140 }}
           rules={[{ required: true, message: t("label.inputStartTime") }]}
         >
-          <TimePicker format="HH:mm" style={{ width: "100%" }} />
+          <TimePicker format="HH:mm" style={{ width: "100%" }} inputReadOnly/>
         </Form.Item>
 
         <Form.Item
@@ -53,7 +53,7 @@ export default function Step2({ data, updateData }) {
           style={{ flex: 1, fontWeight: "bold", minWidth: 140 }}
           rules={[{ required: true, message: t("label.inputEndTime") }]}
         >
-          <TimePicker format="HH:mm" style={{ width: "100%" }} />
+          <TimePicker format="HH:mm" style={{ width: "100%" }} inputReadOnly/>
         </Form.Item>
       </div>
 
@@ -75,6 +75,7 @@ export default function Step2({ data, updateData }) {
           style={{ width: "100%" }}
           placeholder={t("label.inputTemp")}
           min={0}
+          inputMode="numeric"
         />
       </Form.Item>
     </Form>

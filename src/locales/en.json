@@ -94,7 +94,7 @@
     "recoginitionSuccess": "QR code recognized successfully!",
     "recoginitionFailed": "Failed to recognize QR code. Please try again.",
     "apiError": "API error occurred. Please try again later.",
-    "cameraInstruction": "Align your face and tap Capture",
+    "cameraInstruction": "Align your face",
     "editInfo": "Edit and confirm worker info",
     "manualInput": "Manually input worker info"
   }

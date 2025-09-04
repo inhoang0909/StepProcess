@@ -30,7 +30,6 @@ export default function Step4({ data, updateData }) {
       }}
       onValuesChange={handleValueChange}
     >
-      {/* Worker Name - full width */}
       <Form.Item
         label={t("label.workerName")}
         name="workerData"
@@ -40,7 +39,6 @@ export default function Step4({ data, updateData }) {
         <Login />
       </Form.Item>
 
-      {/* Date + Shoe Model trên 1 hàng */}
       <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
         <Form.Item
           label={t("label.date")}
@@ -48,7 +46,7 @@ export default function Step4({ data, updateData }) {
           style={{ flex: 1, fontWeight: "bold", minWidth: 140 }}
           rules={[{ required: true, message: t("label.inputDate") }]}
         >
-          <DatePicker style={{ width: "100%" }} />
+          <DatePicker style={{ width: "100%" }} inputReadOnly/>
         </Form.Item>
 
         <Form.Item
@@ -67,7 +65,6 @@ export default function Step4({ data, updateData }) {
         </Form.Item>
       </div>
 
-      {/* Color + ChemicalWeight trên 1 hàng */}
       <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
         <Form.Item
           label={t("label.color")}
@@ -102,6 +99,7 @@ export default function Step4({ data, updateData }) {
             style={{ width: "100%" }}
             min={0}
             placeholder={t("label.inputChemicalWeight")}
+            inputMode="numeric"
           />
         </Form.Item>
       </div>

@@ -15,13 +15,14 @@ export default function Navbar() {
     i18n.changeLanguage(key.toLowerCase());
   };
 
-  const languageMenu = (
-    <Menu onClick={handleLanguageChange}>
-      <Menu.Item key="en">English</Menu.Item>
-      <Menu.Item key="vi">Tiếng Việt</Menu.Item>
-      <Menu.Item key="zh">中文</Menu.Item>
-    </Menu>
-  );
+  const languageMenu = {
+    items: [
+      { key: "en", label: "English" },
+      { key: "vi", label: "Tiếng Việt" },
+      { key: "zh", label: "中文" },
+    ],
+    onClick: handleLanguageChange,
+  };
 
   return (
     <Header
@@ -41,7 +42,7 @@ export default function Navbar() {
         </Link>
       </div>
       <div style={{ display: "flex", alignItems: "center" }}>
-        <Dropdown overlay={languageMenu} placement="bottomRight">
+        <Dropdown menu={languageMenu} placement="bottomRight">
           <Space style={{ color: "#fff", marginRight: 20, cursor: "pointer" }}>
             <GlobalOutlined /> {currentLang} <DownOutlined />
           </Space>

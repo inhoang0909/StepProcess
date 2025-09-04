@@ -92,7 +92,7 @@
     "recoginitionSuccess": "Nhận diện thành công",
     "recoginitionFailed": "Không nhận diện được khuôn mặt",
     "apiError": "Lỗi API, vui lòng thử lại sau",
-    "cameraInstruction":"Căn chỉnh khuôn mặt của bạn và nhấn Chụp",
+    "cameraInstruction":"Căn chỉnh khuôn mặt của bạn",
     "editInfo":"Chỉnh sửa thông tin công nhân nếu cần",
     "manualInput":"Nhập thông tin công nhân thủ công"
   }
