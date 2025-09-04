@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Input, Button, Card, Typography, message } from "antd";
+import { Input, Button, Card, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ensureForm } from "../utils/helper";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const { Title } = Typography;
 const TARGET_QR = ["123", "456", "789"];
@@ -15,14 +17,14 @@ export default function ScanPage() {
   const handleScan = () => {
     const qr = scanValue.trim();
     if (!TARGET_QR.includes(qr)) {
-      message.error(t("scan.invalid_qr"));
+      toast.error(t("scan.invalid_qr"));
       return;
     }
 
     const form = ensureForm(qr);
 
     if (form.currentStep > 7) {
-      message.info(t("scan.completed"));
+      toast.done(t("scan.completed"));
       navigate(`/summary?id=${form.id}`);
     } else {
       navigate(`/step/${form.currentStep}?id=${form.id}`);
@@ -40,6 +42,7 @@ export default function ScanPage() {
         background: "#f5f5f5",
       }}
     >
+      <ToastContainer position="top-center" />
       <Card
         style={{
           width: 900,
