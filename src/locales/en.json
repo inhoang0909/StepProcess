@@ -18,6 +18,8 @@
   "viewSummary": "View Summary",
   "newForm": "New Form",
   "stepDetails": "Step Details",
+  "openCamera": "Open Camera",
+  "loadingCamera": "Loading camera...",
   "label": {
     "workerName": "Worker Name",
     "date": "Date",
@@ -87,7 +89,8 @@
     "placeholder": "Scan or enter QR code...",
     "button": "Scan",
     "invalid_qr": "Invalid QR code!",
-    "completed": "All 7 steps completed, moving to Summary..."
+    "completed": "All 7 steps completed, moving to Summary...",
+    "submit": "Submit QR"
   },
 
   "msg": {

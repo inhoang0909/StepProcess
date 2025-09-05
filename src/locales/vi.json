@@ -18,6 +18,8 @@
   "viewSummary": "Xem Tóm Tắt",
   "newForm": "Mẫu Mới",
   "stepDetails": "Chi Tiết Bước",
+  "openCamera": "Mở Camera",
+  "loadingCamera": "Đang tải camera...",
   "label": {
     "workerName": "Tên Công Nhân",
     "date": "Ngày",
@@ -86,7 +88,8 @@
     "placeholder": "Quét hoặc nhập mã QR...",
     "button": "Quét",
     "invalid_qr": "Mã QR không hợp lệ!",
-    "completed": "Quét hoàn tất!"
+    "completed": "Quét hoàn tất!",
+    "submit": "Gửi QR"
   },
   "msg": {
     "recoginitionSuccess": "Nhận diện thành công",

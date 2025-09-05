@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button, Space } from "antd";
 import { CameraFilled } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
@@ -14,19 +14,41 @@ export default function Login({ value, onChange }) {
   const [workerInfo, setWorkerInfo] = useState(null);
   const [showConfirm, setShowConfirm] = useState(false);
   const [maxAttemptReached, setMaxAttemptReached] = useState(false);
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
-    setCameraOpen(true);
-  }, []);
+    if (cameraOpen) {
+      timeoutRef.current = setTimeout(() => {
+        setCameraOpen(false);
+        setMaxAttemptReached(true);
+      }, 30000);
+    }
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+    };
+  }, [cameraOpen]);
 
   const handleSuccess = (data) => {
     setWorkerInfo(data);
     setShowConfirm(true);
+    setCameraOpen(false); 
+    setMaxAttemptReached(false); 
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
   };
 
   const handleMaxAttempts = () => {
     setCameraOpen(false);
     setMaxAttemptReached(true);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
   };
 
   const handleConfirm = (data) => {

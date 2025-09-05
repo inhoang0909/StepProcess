@@ -18,6 +18,8 @@
   "viewSummary": "查看总结",
   "newForm": "新建表单",
   "stepDetails": "步骤详情",
+  "openCamera": "打开相机",
+  "loadingCamera": "正在加载相机...",
   "label": {
     "workerName": "工人姓名",
     "date": "日期",
@@ -86,7 +88,9 @@
     "placeholder": "扫描或输入二维码...",
     "button": "扫描",
     "invalid_qr": "无效的二维码！",
-    "completed": "扫描完成！"
+    "completed": "扫描完成！",
+    "submit": "提交二维码"
+
   },
   "msg": {
     "recoginitionSuccess": "成功识别",
